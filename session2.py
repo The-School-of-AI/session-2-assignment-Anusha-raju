@@ -47,3 +47,11 @@ def compare_strings_old(n):
     for i in range(n):
         if 'd' in char_list:
             pass
+def compare_strings_new(n):
+    a = 'a long string that is not intered' * 200
+    b = 'a long string that is not intered' * 200
+    if a is b:
+        pass
+    new_char_list=list(a)
+    if "d" in new_char_list:
+        pass
