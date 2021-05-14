@@ -36,6 +36,7 @@ def clear_memory(collection: List[Something]):
     # you probably need to add some comment here
     collection.clear()
     gc.collect()
+    
 def critical_function():
     collection = list()
     for i in range(1, 1024 * 128):
