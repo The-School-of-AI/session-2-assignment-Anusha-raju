@@ -14,3 +14,10 @@ class Something(object):
         self.something_new = None
     def __repr__(n):
         return "Something's class __repr__"
+class SomethingNew(object):
+    def __init__(self, i: int = 0, something: Something = None):
+        super().__init__()
+        self.i = i
+        self.something = something
+    def __repr__(n):
+        return "SomethingNew class __repr__"
