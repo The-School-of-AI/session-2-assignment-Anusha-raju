@@ -10,12 +10,10 @@ import gc
 # Refer to test_clear_memory Test in test_session2.py to see how we're crudely finding that
 # this code is sub-optimal.
 class Something(object):
-
     def __init__(self):
         super().__init__()
         self.something_new = None
-    
-    def __repr__():
+    def __repr__(n):
         return "Something's class __repr__"
         
 
@@ -26,7 +24,7 @@ class SomethingNew(object):
         super().__init__()
         self.i = i
         self.something = something
-    def __repr__():
+    def __repr__(n):
         return "SomethingNew class __repr__"
      
 
