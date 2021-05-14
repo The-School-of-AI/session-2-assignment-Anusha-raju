@@ -10,6 +10,7 @@ import gc
 # Refer to test_clear_memory Test in test_session2.py to see how we're crudely finding that
 # this code is sub-optimal.
 class Something(object):
+    
     def __init__(self):
         super().__init__()
         self.something_new = None
@@ -46,6 +47,7 @@ def critical_function():
 # Here we are suboptimally testing whether two strings are exactly same or not
 # After that we are trying to see if we have a particular character in that string or not
 # Currently the code is suboptimal. Write it in such a way that it takes 1/10 the current time
+
 # DO NOT CHANGE THIS PROGRAM
 def compare_strings_old(n):
     a = 'a long string that is not intered' * 200
