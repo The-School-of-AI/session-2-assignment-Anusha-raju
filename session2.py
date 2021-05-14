@@ -37,6 +37,8 @@ def critical_function():
     for i in range(1, 1024 * 128):
         add_something(collection, i)
     clear_memory(collection)
+# Here we are suboptimally testing whether two strings are exactly same or not
+# After that we are trying to see if we have a particular character in that string or not
 def compare_strings_old(n):
     a = 'a long string that is not intered' * 200
     b = 'a long string that is not intered' * 200
