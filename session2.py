@@ -2,7 +2,6 @@
 from typing import List
 import time
 import gc
-
 # Here in this code we will be leaking memory because we are creating cyclic reference.
 # Find that we are indeed making cyclic references.
 # Eventually memory will be released, but that is currently not happening immediately.
@@ -16,7 +15,6 @@ class Something(object):
         self.something_new = None
     def __repr__(n):
         return "Something's class __repr__"
-    
 class SomethingNew(object):
     def __init__(self, i: int = 0, something: Something = None):
         super().__init__()
@@ -24,7 +22,6 @@ class SomethingNew(object):
         self.something = something
     def __repr__(n):
         return "SomethingNew class __repr__"
-    
 def add_something(collection: List[Something], i: int):
     something = Something()
     something.something_new = SomethingNew(i, something)
@@ -32,18 +29,15 @@ def add_something(collection: List[Something], i: int):
 def reserved_function():
     # to be used in future if required
     pass
-
 def clear_memory(collection: List[Something]):
     # you probably need to add some comment here
     collection.clear()
     gc.collect()
-    
 def critical_function():
     collection = list()
     for i in range(1, 1024 * 128):
         add_something(collection, i)
     clear_memory(collection)
-    
 # Here we are suboptimally testing whether two strings are exactly same or not
 # After that we are trying to see if we have a particular character in that string or not
 # Currently the code is suboptimal. Write it in such a way that it takes 1/10 the current time
@@ -59,7 +53,6 @@ def compare_strings_old(n):
     for i in range(n):
         if 'd' in char_list:
             pass
-        
 # YOU NEED TO CHANGE THIS PROGRAM
 def compare_strings_new(n):
     a = 'a long string that is not intered' * 200
